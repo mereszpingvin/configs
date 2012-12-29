@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    ServerName changedomain
+    ServerAlias changedomain www.changedomain
+    ServerAdmin webmaster@changedomain
+    DocumentRoot  /var/www/users/redirect/htdocs/
+<Directory  /var/www/users/redirect/htdocs/ >
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+ErrorLog /var/log/apache2/changedomain_error_log
+CustomLog /var/log/apache2/changedomain_access_log combined
+Redirect 301 / URL
+</VirtualHost>

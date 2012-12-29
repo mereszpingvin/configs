@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+    ServerName changedomain
+    ServerAlias changedomain www.changedomain
+    ServerAdmin webmaster@changedomain
+    DocumentRoot  /var/www/users/statdomain/default/wwwroot/changedomain/
+    <IfModule mod_php5.c>
+        php_admin_flag engine off
+    </IfModule>
+    <Directory  /var/www/users/statdomain/default/wwwroot/changedomain/ >
+        php_flag engine off
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+ErrorLog /var/log/apache2/changedomain_error_log
+CustomLog /var/log/apache2/changedomain_access_log combined
+</VirtualHost>

@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+    ServerName changedomain
+    ServerAlias changedomain www.changedomain
+    ServerAdmin webmaster@changedomain
+    DirectoryIndex index.php index.html
+    DocumentRoot  /var/www/users/default/var/www/users/default/wwwroot/changedomain/
+    <IfModule mod_fastcgi.c>
+        SuexecUserGroup default users
+        Alias /cgi-bin/ /var/www/users/default/var/www/users/default/cgi-bin/
+    </IfModule>
+    <Directory  /var/www/users/default/var/www/users/default/wwwroot/changedomain/ >
+        Options FollowSymLinks +ExecCGI
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    </Directory>
+ErrorLog /var/log/apache2/changedomain_error_log
+CustomLog /var/log/apache2/changedomain_access_log combined
+</VirtualHost>
