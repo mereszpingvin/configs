@@ -1,0 +1,14 @@
+^\N^ppp-(.*)\N
+^\N^dsl-pool\N
+^\N\.(pool|pppoe|adsl|dsl|dialup|broad|cust-adsl)\.\N
+^\N^(pool|pppoe|adsl|dsl|dialup|broad|cust-adsl)\.\N
+^\N^(pool|pppoe|adsl|dsl|dialup|broad|cust-adsl)-\N
+^\N([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.\N
+^\N([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)\.\N
+*.dip.t-dialin.net
+*.dynamic.hinet.net
+94.23.1.133
+*.res.bhn.net
+*.staticIP.rima-tde.net
+*.adsl.alicedsl.de
+*.cm.vtr.net
